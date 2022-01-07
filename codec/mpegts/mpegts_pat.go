@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
-	"github.com/Monibuca/utils/v3"
+	"github.com/wgsP/utils/v3"
 	"io"
 )
 

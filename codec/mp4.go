@@ -1,7 +1,7 @@
 package codec
 
 import (
-	"github.com/Monibuca/utils/v3"
+	"github.com/wgsP/utils/v3"
 )
 
 type MP4 interface {
