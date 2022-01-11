@@ -63,11 +63,15 @@ func ListenTCP(addr string, process func(net.Conn)) error {
 func ListenUDP(address string, networkBuffer int) (*net.UDPConn, error) {
 	addr, err := net.ResolveUDPAddr("udp", address)
 	if err != nil {
-		log.Fatalf("udp server ResolveUDPAddr :%s error, %v", address, err)
+		//log.Fatalf("udp server ResolveUDPAddr :%s error, %v", address, err)
+		Printf("udp server ListenUDP :%s error, %v", address, err)
+		return nil, err
 	}
 	conn, err := net.ListenUDP("udp", addr)
 	if err != nil {
-		log.Fatalf("udp server ListenUDP :%s error, %v", address, err)
+		//log.Fatalf("udp server ListenUDP :%s error, %v", address, err)
+		Printf("udp server ListenUDP :%s error, %v", address, err)
+		return nil, err
 	}
 	if err = conn.SetReadBuffer(networkBuffer); err != nil {
 		Printf("udp server video conn set read buffer error, %v", err)
